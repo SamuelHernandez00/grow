@@ -19,12 +19,8 @@ class CreateUsuariosTable extends Migration
             $table->string('tipo')->nullable();
             $table->string('email');
             $table->string('password');
-            $table->string('role');
             $table->date('fn');
             $table->text('foto')->nullable();
-            $table->integer('numerodecuenta')->nullable();
-            $table->string('formadepago')->nullable();
-            $table->string('rfc')->nullable();
             $table->string('terminos');
             $table->timestamps();
         });

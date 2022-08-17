@@ -68,7 +68,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Catologos:</h6>
                         <a class="collapse-item" href="{{ route('usuarios') }}">Usuarios</a>
-                        <a class="collapse-item active" href="{{ route('servicios') }}">Empleados</a>
+                        <a class="collapse-item active" href="{{ route('productos') }}">Empleados</a>
                         <a class="collapse-item" href="{{route('ventas')}}" id="ventas" >Ventas</a>
                     </div>
                 </div>
@@ -397,17 +397,7 @@
     <label >Foto</label>
     <input type="file"  name="foto" required>
      </div>
-     <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Numero de Cuenta</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="numerodecuenta" required>
-     </div>
-     <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Forma de Pago</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="formadepago" required>
-     </div>
-     <label for="exampleInputEmail1" class="form-label">RFC</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="rfc" required>
-     </div>
+   
   <div class="mb-3 form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1" name="terminos" required>
     <label class="form-check-label" for="exampleCheck1">Terminos</label>
@@ -415,7 +405,8 @@
   <button type="submit" class="btn btn-primary">Enviar</button>
 
                         </form>
-                        Busquedaa de usuarios
+                        <br>
+                        Busqueda de usuarios
 
                         <table lenght="30" border>
                             <tr>
@@ -424,9 +415,7 @@
                                 <th>Foto</th>
                                 <th>Correo</th>
                                 <th>Fecha de Nacimiento</th>
-                                <th>Forma de Pago</th>
-                                <th>Numero de cuenta</th>
-                                <th>RFC</th>
+                    
                             </tr>
                             @foreach($usuarios as $usu)
                             <tr>
@@ -435,9 +424,6 @@
                                 <td>{{ $usu->foto }}</td> 
                                 <td>{{ $usu->email }}</td>
                                 <td>{{ $usu->fn }}</td>
-                                <td>{{ $usu->formadepago }}</td>
-                                <td>{{ $usu->numerodecuenta }}</td>
-                                <td>{{ $usu->rfc }}</td>
                                 <td>
 			                   <a href="{{ route('editar',['id' => $usu->id]) }}"><button class="btn btn-warning"><b style="color:white;">Editar</b></button></a>
         	                    <form action="{{ route('borrar1',['id' => $usu->id]) }}" method="POST" >
@@ -450,7 +436,7 @@
                             @endforeach  
                         </table>
                     </div>
-
+    <br><br><br>
                     <div class="row">
 
                        

@@ -39,6 +39,8 @@
 	
 	<!-- Favicon  -->
     <link rel="icon" href="{{ asset('images/favicon.png') }}">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     
@@ -139,6 +141,8 @@
                             <p class="border border-red-500 rounded-md bg-red-100 w-full
                             text-red-600 p-2 my-2">* Error</p>
                             @enderror
+
+                            <div class="g-recaptcha" data-sitekey="6LdGFHshAAAAACN6yoQVhSBIZrZ2sWrblOtlPh6C"></div>
                             
                             <div class="form-group">
                                 <button type="submit" class="form-control-submit-button">Iniciar Sesion</button>
@@ -168,6 +172,9 @@
     
     
     <!-- Scripts -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer>
+</script>
     <script src="{{ asset('js/jquery.min.js') }}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="{{ asset('js/popper.min.js') }}"></script> <!-- Popper tooltip library for Bootstrap -->
     <script src="{{ asset('js/bootstrap.min.js') }}"></script> <!-- Bootstrap framework -->

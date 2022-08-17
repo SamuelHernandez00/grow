@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\servicios;
+use App\Models\productos;
 use App\Models\ventas;
 use App\Models\organizaciones;
 
@@ -17,11 +17,10 @@ class sitio extends Controller
             'telefono' => $request->input('telefono'),
             'email' => $request->input('email'),
             'password' => bcrypt($request->input('password')),
+            'tipo' => $request->input('tipo'),
             'fn' => $request->input('fn'),
             'foto' => $request->input('foto'),
-            'numerodecuenta' => $request->input('numerodecuenta'),
-            'formadepago' => $request->input('formadepago'),
-            'rfc' =>$request->input('rfc'),
+           
             'terminos' => $request->input('terminos'),
 
         ));
@@ -39,9 +38,7 @@ class sitio extends Controller
             'password' => bcrypt($request->input('password')),
             'fn' => $request->input('fn'),
             'foto' => $request->input('foto'),
-            'numerodecuenta' => $request->input('numerodecuenta'),
-            'formadepago' => $request->input('formadepago'),
-            'rfc' =>$request->input('rfc'),
+           
             'terminos' => $request->input('terminos'),
 
         ));
@@ -59,22 +56,21 @@ class sitio extends Controller
         ->with(['usuarios'=>$usuarios]);
     }
 
-    public function registrar_servicios (Request $request){
-        $servicio = servicios::create(array(
+    public function registrar_productos (Request $request){
+        $producto = productos::create(array(
             'nombre' => $request->input('nombre'),
-            'tipo_servicio' => $request->input('tipo_servicio'),
             'descripcion' => $request->input('descripcion'),
-            'Imagen' => $request->input('Imagen'),
-            'costo' => $request->input('costo')
+            'img' => $request->input('img'),
+            'precio' => $request->input('precio')
 
         ));
-        return redirect()->to('/dash_Servicios');
+        return redirect()->to('/dash_productos');
     }
-    public function lista_servicios(){
-        $servicios = servicios::all();
+    public function lista_productos(){
+        $productos = productos::all();
 
-        return view('servicios')
-        ->with(['servicios'=>$servicios]);
+        return view('productos')
+        ->with(['productos'=>$productos]);
     }
 
     public function editar(User $id){
@@ -85,32 +81,31 @@ class sitio extends Controller
         ->with(['usu'=>$id]);
     }
 
-    public function editar_servicio(servicios $id){
-        $serv = servicios::find($id);
+    public function editar_producto(productos $id){
+        $serv = productos::find($id);
            
     
-        return view('editar_servicio')
+        return view('editar_producto')
         ->with(['serv'=>$id]);
     }
 
-    public function salvar_servicio(servicios $id, Request $request){
+    public function salvar_producto(productos $id, Request $request){
        
 
-        $ser = servicios::find($id->id);
+        $ser = productos::find($id->id);
            $ser->nombre = $request->nombre;
-            $ser->tipo_servicio = $request->tipo_servicio;
             $ser->descripcion = $request->descripcion;
-            $ser->Imagen = $request->Imagen;
-            $ser->costo = $request->costo;
+            $ser->img = $request->img;
+            $ser->precio = $request->precio;
        $ser->save();
 
-       return redirect()->to('dash_Servicios');
+       return redirect()->to('dash_productos');
        
    }
 
-   public function borrar_servicio(servicios $id){
+   public function borrar_producto(productos $id){
     $id->delete();
-    return redirect()->to('dash_Servicios');
+    return redirect()->to('dash_productos');
 }
 
 
@@ -123,9 +118,7 @@ class sitio extends Controller
             $con->email = $request->email;
             $con->password = $request->password;
             $con->tipo = $request->tipo;
-            $con->numerodecuenta = $request->numerodecuenta;
             $con->foto = $request->foto;
-            $con->formadepago = $request->formadepago;
         $con->save();
 
         return redirect()->to('dash_usuarios');

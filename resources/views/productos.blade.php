@@ -367,22 +367,12 @@
                     <div>
                         
 <br>
-<form action="{{ route('registrar_servicios') }}" method="POST">
+<form action="{{ route('registrar_productos') }}" method="POST">
     @csrf
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Nombre del Servicios</label>
+    <label for="exampleInputEmail1" class="form-label">Nombre del Producto</label>
     <input type="text" class="form-control" id="" aria-describedby="emailHelp" name="nombre" required>
     </div>
-    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Tipo Servicios</label>
-    <select class="form-select" aria-label="Default select example" name="tipo_servicio" required>
-    <option selected>Selecciona un Servicio</option>
-    <option value="Publicidad">Publicidad</option>
-    <option value="Sitio Web">Sitio Web</option>
-    <option value="Comercial">Comercial</option>
-    </select>
-    </div>
-  
     <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Descripcion:</label>
     <input type="textarea" class="form-control" id="" aria-describedby="emailHelp" name="descripcion" required>
@@ -390,11 +380,11 @@
   
     <div class="mb-3">
     <label >Imagen</label>
-    <input type="file"  id=""  name="Imagen" required>
+    <input type="file"  id=""  name="img" required>
     </div> 
     <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Costo</label>
-    <input type="text" class="form-control" id="" aria-describedby="emailHelp" name="costo" required>
+    <label for="exampleInputEmail1" class="form-label">Precio</label>
+    <input type="text" class="form-control" id="" aria-describedby="emailHelp" name="precio" placeholder="$$" required>
     </div>
   
   
@@ -408,23 +398,21 @@
                             <tr>
                                 <th>Id</th>
                                 <th>Nombre</th>
-                                <th>Tipo_Servicios</th>
                                 <th>Descripcion</th>
                                 <th>Imagen</th>
-                                <th>Costo</th>
+                                <th>Precio</th>
                                
                             </tr>
-                            @foreach($servicios as $servicio)
+                            @foreach($productos as $servicio)
                             <tr>
                                 <td>{{ $servicio->id }}</td>
                                 <td>{{ $servicio->nombre }}</td>
-                                <td>{{ $servicio->tipo_servicio }}</td> 
-                                <td>{{ $servicio->descripcion }}</td>
-                                <td>{{ $servicio->Imagen }}</td>
-                                <td>{{ $servicio->costo }}</td>
+                                <td>{{ $servicio->descripcion }}</td> 
+                                <td>{{ $servicio->img }}</td>
+                                <td>{{ $servicio->precio }}</td>
                                 <td>
-			                   <a href="{{ route('editar_servicio',['id' => $servicio->id]) }}"><button class="btn btn-warning"><b style="color:white;">Editar</b></button></a>
-        	                    <form action="{{ route('borrar_servicio',['id' => $servicio->id]) }}" method="POST" >
+			                   <a href="{{ route('editar_producto',['id' => $servicio->id]) }}"><button class="btn btn-warning"><b style="color:white;">Editar</b></button></a>
+        	                    <form action="{{ route('borrar_producto',['id' => $servicio->id]) }}" method="POST" >
 				                {{ csrf_field() }}
 				                {{ method_field('DELETE') }}
 				                <input type="submit" value="Borrar 1"  class="btn btn-warning" style="color:black;">

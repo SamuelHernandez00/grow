@@ -30,6 +30,7 @@
 	
 	<!-- Favicon  -->
     <link rel="icon" href="{{ asset('images/favicon.png') }}">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     
@@ -47,7 +48,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
         <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Evolo</a> -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Grow</a> -->
 
         <!-- Image Logo -->
         <a class="navbar-brand logo-image" href="index.html"><img src="{{ asset('images/logo.svg') }}" alt="alternative"></a>
@@ -65,7 +66,7 @@
                     <a class="nav-link page-scroll" href="#header">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#services">Servicios</a>
+                    <a class="nav-link page-scroll" href="#services">productos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#pricing">Paquetes</a>
@@ -110,7 +111,7 @@
                     <div class="col-lg-6">
                         <div class="text-container">
                             <h1><span class="turquoise">Actualice su Negocio</span> entre al mundo digital</h1>
-                            <p class="p-large">Grow es un Servicio que te ofrece diversos servicios para tu negocios, desde manejo de publicidad en redes sociales, hasta creacion de contenido y paginas web</p>
+                            <p class="p-large">Grow es un Servicio que te ofrece diversos productos para tu negocios, desde manejo de publicidad en redes sociales, hasta creacion de contenido y paginas web</p>
                             <a class="btn-solid-lg page-scroll" href="#services">Conocer más </a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
@@ -184,8 +185,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Servicios de crecimiento empresarial</h2>
-                    <p class="p-heading p-large">Brindamos servicios a pequeñas y medianas empresas, con servicios de crecimiento de alta calidad que se presentan a continuación.</p>
+                    <h2>productos de crecimiento empresarial</h2>
+                    <p class="p-heading p-large">Brindamos productos a pequeñas y medianas empresas, con productos de crecimiento de alta calidad que se presentan a continuación.</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
@@ -235,7 +236,7 @@
                 <div class="col-lg-6">
                     <div class="text-container">
                         <h2>Diseñamos y Planificamos las mejores estrategias de negocios</h2>
-                        <p>Utilice nuestro personal y nuestra experiencia para diseñar y planificar su estrategia de crecimiento empresarial. El equipo de Evolo está ansioso por aconsejarle sobre las mejores oportunidades que debe considerar</p>
+                        <p>Utilice nuestro personal y nuestra experiencia para diseñar y planificar su estrategia de crecimiento empresarial. El equipo de Grow está ansioso por aconsejarle sobre las mejores oportunidades que debe considerar</p>
                         <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">LIGHTBOX</a>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
@@ -300,7 +301,7 @@
                     <hr>
                     <h5>Core feature</h5>
                     <p>The emailing module basically will speed up your email marketing operations while offering more subscriber control.</p>
-                    <p>Do you need to build lists for your email campaigns? It just got easier with Evolo.</p>
+                    <p>Do you need to build lists for your email campaigns? It just got easier with Grow.</p>
                     <ul class="list-unstyled li-space-lg">
                         <li class="media">
                             <i class="fas fa-check"></i><div class="media-body">List building framework</div>
@@ -343,7 +344,7 @@
                     <hr>
                     <h5>Core feature</h5>
                     <p>The emailing module basically will speed up your email marketing operations while offering more subscriber control.</p>
-                    <p>Do you need to build lists for your email campaigns? It just got easier with Evolo.</p>
+                    <p>Do you need to build lists for your email campaigns? It just got easier with Grow.</p>
                     <ul class="list-unstyled li-space-lg">
                         <li class="media">
                             <i class="fas fa-check"></i><div class="media-body">List building framework</div>
@@ -382,7 +383,7 @@
                 <div class="col-lg-6">
                     <div class="text-container">
                         <h2>Aqui puedes registrarte </h2>
-                        <p>Evolo is one of the easiest and feature packed marketing automation apps in the market. Discover what it can do for your business organization right away.</p>
+                        <p>Grow is one of the easiest and feature packed marketing automation apps in the market. Discover what it can do for your business organization right away.</p>
                         <ul class="list-unstyled li-space-lg">
                             <li class="media">
                                 <i class="fas fa-check"></i>
@@ -443,12 +444,22 @@
                                 <input type="hidden" class="form-control-input" id="rname" name="rfc" required>
                                 
                             </div>
+
+                            <div class="from-group">
+                                <input type="hidden" class="form-control-input" id="tipo" name="tipo" value="usuario" required>
+                                
+                            </div>
+
                             
                             
                             <div class="form-group checkbox">
                                 <input type="checkbox" id="rterms" value="Terminos Aceptados" name="terminos" required>Acepto los terminos y condiciones <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms & Conditions</a>
                                 <div class="help-block with-errors"></div>
-                            </div>
+                            </div><br>
+
+                            <div class="g-recaptcha" data-sitekey="6LdGFHshAAAAACN6yoQVhSBIZrZ2sWrblOtlPh6C"></div>
+      <br/>
+
                             <div class="form-group">
                                 <button type="submit" class="form-control-submit-button">Registrar</button>
                             </div>
@@ -490,7 +501,7 @@
                     </div> <!-- end of image-container -->
                     <!-- end of video preview -->
 
-                    <p>This video will show you a case study for one of our <strong>Major Customers</strong> and will help you understand why your startup needs Evolo in this highly competitive market</p>
+                    <p>This video will show you a case study for one of our <strong>Major Customers</strong> and will help you understand why your startup needs Grow in this highly competitive market</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -520,7 +531,7 @@
                                     <div class="card">
                                         <img class="card-image" src="{{ asset('images/testimonial-1.svg') }}" alt="alternative">
                                         <div class="card-body">
-                                            <p class="testimonial-text">I just finished my trial period and was so amazed with the support and results that I purchased Evolo right away at the special price.</p>
+                                            <p class="testimonial-text">I just finished my trial period and was so amazed with the support and results that I purchased Grow right away at the special price.</p>
                                             <p class="testimonial-author">Jude Thorn - Designer</p>
                                         </div>
                                     </div>
@@ -532,7 +543,7 @@
                                     <div class="card">
                                         <img class="card-image" src="{{ asset('images/testimonial-2.svg') }}" alt="alternative">
                                         <div class="card-body">
-                                            <p class="testimonial-text">Evolo has always helped or startup to position itself in the highly competitive market of mobile applications. You will not regret using it!</p>
+                                            <p class="testimonial-text">Grow has always helped or startup to position itself in the highly competitive market of mobile applications. You will not regret using it!</p>
                                             <p class="testimonial-author">Marsha Singer - Developer</p>
                                         </div>
                                     </div>        
@@ -544,7 +555,7 @@
                                     <div class="card">
                                         <img class="card-image" src="{{ asset('images/testimonial-3.svg') }}" alt="alternative">
                                         <div class="card-body">
-                                            <p class="testimonial-text">Love their services and was so amazed with the support and results that I purchased Evolo for two years in a row. They are awesome.</p>
+                                            <p class="testimonial-text">Love their services and was so amazed with the support and results that I purchased Grow for two years in a row. They are awesome.</p>
                                             <p class="testimonial-author">Roy Smith - Marketer</p>
                                         </div>
                                     </div>        
@@ -694,7 +705,7 @@
                         <li class="address">Don't hesitate to give us a call or send us a contact form message</li>
                         <li><i class="fas fa-map-marker-alt"></i>22 Innovative Area, San Francisco, CA 94043, US</li>
                         <li><i class="fas fa-phone"></i><a class="turquoise" href="tel:003024630820">+81 720 2212</a></li>
-                        <li><i class="fas fa-envelope"></i><a class="turquoise" href="mailto:office@evolo.com">office@evolo.com</a></li>
+                        <li><i class="fas fa-envelope"></i><a class="turquoise" href="mailto:office@Grow.com">office@Grow.com</a></li>
                     </ul>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -724,7 +735,7 @@
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group checkbox">
-                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I have read and agree with Evolo's stated <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a> 
+                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I have read and agree with Grow's stated <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a> 
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
@@ -749,7 +760,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="footer-col">
-                        <h4>About Evolo</h4>
+                        <h4>About Grow</h4>
                         <p>We're passionate about offering some of the best business growth services for startups</p>
                     </div>
                 </div> <!-- end of col -->

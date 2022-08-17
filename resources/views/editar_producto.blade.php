@@ -17,23 +17,13 @@
 
 <h2>Editar Registro de Usuario</h2>
         <hr>
-        <form action="{{ route('salvar_servicio',['id' => $serv->id]) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('salvar_producto',['id' => $serv->id]) }}" method="POST" enctype="multipart/form-data">
           {{ csrf_field() }}
           {{ method_field('PUT') }}  
           <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Nombre del Servicios</label>
+    <label for="exampleInputEmail1" class="form-label">Nombre del productos</label>
     <input type="text" class="form-control" id="" aria-describedby="emailHelp" name="nombre" value="{{ $serv->nombre}}" required>
     </div>
-    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Tipo Servicios</label>
-    <select class="form-select" aria-label="Default select example" name="tipo_servicio" value="{{ $serv->tipo_servicio}}" required>
-    <option selected>Selecciona un Servicio</option>
-    <option value="Publicidad">Publicidad</option>
-    <option value="Sitio Web">Sitio Web</option>
-    <option value="Comercial">Comercial</option>
-    </select>
-    </div>
-  
     <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Descripcion:</label>
     <input type="textarea" class="form-control" id="" aria-describedby="emailHelp" name="descripcion" value="{{ $serv->descripcion}}" required>
@@ -41,11 +31,11 @@
   
     <div class="mb-3">
     <label >Imagen</label>
-    <input type="file"  id=""  name="Imagen" value="{{ $serv->Imagen}}" required>
+    <input type="file"  id=""  name="img" value="{{ $serv->img}}" required>
     </div> 
     <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Costo</label>
-    <input type="text" class="form-control" id="" aria-describedby="emailHelp" name="costo" value="{{ $serv->costo}}" required>
+    <input type="text" class="form-control" id="" aria-describedby="emailHelp" name="precio" value="{{ $serv->precio}}" required>
     </div>
   
   

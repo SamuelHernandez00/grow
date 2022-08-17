@@ -20,9 +20,6 @@ class User extends Model
         'password',
         'fn',
         'foto',
-        'numerodecuenta',
-        'formadepago',
-        'rfc',
         'terminos'
     ];
 

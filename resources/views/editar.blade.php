@@ -39,7 +39,7 @@
      </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" name="password" value="{{ $usu->password}}" onkeyup="evaluar(this);" required>
+    <input type="password" class="form-control" id="exampleInputPassword1" name="password"  onkeyup="evaluar(this);" required>
   </div>
   <b id="nivel"></b>
     <b id="error"></b>
@@ -49,19 +49,9 @@
      </div>
      <div class="mb-3">
     <label >Foto</label>
-    <input type="file"  name="foto" required>
+    <input type="file"  name="foto"  value="{{ $usu->foto }}" required>
      </div>
-     <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Numero de Cuenta</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="numerodecuenta" value="{{ $usu->numerodecuenta }}" required>
-     </div>
-     <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Forma de Pago</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="formadepago" value="{{ $usu->formadepago }}" required>
-     </div>
-     <label for="exampleInputEmail1" class="form-label">RFC</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="rfc" value="{{ $usu->rfc }}" required>
-     </div>
+     
  <br>
      <button type="submit" class="btn btn-primary">Submit</button>
        
