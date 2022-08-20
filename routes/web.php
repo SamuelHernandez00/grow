@@ -46,9 +46,11 @@ Route::post('/login', [login::class, 'login']);
 
 
 
-    Route::get('dash', function () {
-        return view('dash');
-    });
+Route::name('dash')
+->get('dash/',
+[sitio::class, 'dash'
+]);
+
 
 Route::name('usuarios')
     ->get('dash_usuarios/',

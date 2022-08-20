@@ -31,7 +31,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -209,7 +209,7 @@
                                 <td>{{ $usu->email }}</td>
                                 <td>{{ $usu->fn }}</td>
                                 <td>
-			                   <a href="{{ route('editar',['id' => $usu->id]) }}"><button class="btn btn-warning"><b style="color:white;">Editar</b></button></a>
+			                   <a href="{{ route('editar',['id' => $usu->id]) }}"><button class="btn btn-primary"><b style="color:white;">Editar</b></button></a>
         	                    <form action="{{ route('borrar1',['id' => $usu->id]) }}" method="POST" >
 				                {{ csrf_field() }}
 				                {{ method_field('DELETE') }}

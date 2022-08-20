@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="icon" href="{{ asset('img/logo.png') }}">
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
 </head>
 
@@ -31,7 +32,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -201,6 +202,9 @@
                                 <th>Total</th>
                                
                             </tr>
+                            @php
+                              $suma=0;
+                             @endphp
                             @foreach($ventas as $venta)
                             <tr>
                                 <td>{{ $venta->id }}</td>
@@ -209,7 +213,7 @@
                                 <td><img src=" {{ asset('img/'.$venta->productos->img)}}" width="40"></td>
                                 <td>{{$venta->productos->descripcion}}</td>
                                 <td>{{$venta->cantidad}}</td>
-                                <td>{{$venta->total}}</td>a
+                                <td>${{$venta->total}}</td>a
                                <td>
         	                    <form action="{{ route('borrar_venta',['id' => $venta->id]) }}" method="POST" >
 				                {{ csrf_field() }}
@@ -220,9 +224,16 @@
                                     </form>
 			                      
                             </tr>
+                            @php
+                $suma+=$venta->total;//sumanos los valores, ahora solo fata mostrar dicho valor
+                 @endphp
                             @endforeach  
                         </table>
                     </div>
+                    Total de ventas realizadas: <label id="sumatotal" > $ {{ $suma }}</label>
+        
+                    <br>
+
 
                     <div class="row">
 

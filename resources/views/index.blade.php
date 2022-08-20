@@ -80,21 +80,7 @@
                     <a class="nav-link page-scroll" href="#contact">Contacto</a>
                 </li>
             </ul>
-            <span class="nav-item social-icons">
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x facebook"></i>
-                        <i class="fab fa-facebook-f fa-stack-1x"></i>
-                    </a>
-                </span>
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x twitter"></i>
-                        <i class="fab fa-twitter fa-stack-1x"></i>
-                    </a>
-                </span>
-            </span>
-        </div>
+           
     </nav> <!-- end of navbar -->
     <!-- end of navigation -->
 
@@ -392,20 +378,8 @@
                         </div> <!-- end of image wrapper -->
                         <p class="p-large"><strong>Rudy Samuel Rios Hernandez</strong></p>
                         <p class="job-title">Desarrollador Web</p>
-                        <span class="social-icons">
-                            <span class="fa-stack">
-                                <a href="#your-link">
-                                    <i class="fas fa-circle fa-stack-2x facebook"></i>
-                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack">
-                                <a href="#your-link">
-                                    <i class="fas fa-circle fa-stack-2x instagram"></i>
-                                    <i class="fab fa-twitter fa-stack-1x"></i>
-                                </a>
-                            </span>
-                        </span> <!-- end of social-icons -->
+                      
+                            
                     </div> <!-- end of team-member -->
                     <!-- end of team member -->
 
@@ -435,34 +409,7 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1583.3539633245775!2d-99.50692526516735!3d19.287949289581988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdf5735250700f%3A0x5c64e6f6671d0f27!2stuburro.com!5e0!3m2!1ses-419!2smx!4v1660897194590!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
-                    
-                    <!-- Contact Form -->
-                    <form id="contactForm" data-toggle="validator" data-focus="false">
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
-                            <label class="label-control" for="cname">Nombre</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required>
-                            <label class="label-control" for="cemail">Email</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                            <label class="label-control" for="cmessage">Mensaje</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                       
-                        <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">Enviar mensaje</button>
-                        </div>
-                        <div class="form-message">
-                            <div id="cmsgSubmit" class="h3 text-center hidden"></div>
-                        </div>
-                    </form>
-                    <!-- end of contact form -->
-
+                  
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="{{ asset('img/logo.png') }}">
+    <title>Login</title>
 </head>
 <body>
 <!DOCTYPE html>
@@ -94,20 +95,7 @@
                     <a class="nav-link page-scroll" href="#contact">Contacto</a>
                 </li>
             </ul>
-            <span class="nav-item social-icons">
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x facebook"></i>
-                        <i class="fab fa-facebook-f fa-stack-1x"></i>
-                    </a>
-                </span>
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x twitter"></i>
-                        <i class="fab fa-twitter fa-stack-1x"></i>
-                    </a>
-                </span>
-            </span>
+           
         </div>
     </nav> <!-- end of navbar -->
     <!-- end of navigation -->
@@ -143,7 +131,7 @@
                             @enderror
 
                             <div class="g-recaptcha" data-sitekey="6LdGFHshAAAAACN6yoQVhSBIZrZ2sWrblOtlPh6C"></div>
-                            
+                            <br>
                             <div class="form-group">
                                 <button type="submit" class="form-control-submit-button">Iniciar Sesion</button>
                             </div>

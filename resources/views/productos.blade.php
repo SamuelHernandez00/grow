@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <link rel="icon" href="{{ asset('img/logo.png') }}">
     <title>Grow Servicios</title>
 
     <!-- Custom fonts for this template-->
@@ -31,7 +31,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -187,9 +187,9 @@
                                 <td>{{ $servicio->nombre }}</td>
                                 <td>{{ $servicio->descripcion }}</td> 
                                 <td><img src=" {{ asset('img/'.$servicio->img)}}" width="40"></td>
-                                <td>{{ $servicio->precio }}</td>
+                                <td>${{ $servicio->precio }}</td>
                                 <td>
-			                   <a href="{{ route('editar_producto',['id' => $servicio->id]) }}"><button class="btn btn-warning"><b style="color:white;">Editar</b></button></a>
+			                   <a href="{{ route('editar_producto',['id' => $servicio->id]) }}"><button class="btn btn-primary"><b style="color:white;">Editar</b></button></a>
         	                    <form action="{{ route('borrar_producto',['id' => $servicio->id]) }}" method="POST" >
 				                {{ csrf_field() }}
 				                {{ method_field('DELETE') }}
