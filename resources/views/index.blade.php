@@ -29,7 +29,7 @@
 	<link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 	
 	<!-- Favicon  -->
-    <link rel="icon" href="{{ asset('img/f1.png') }}">
+    <link rel="icon" href="{{ asset('img/logo.png') }}">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
@@ -51,7 +51,7 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Grow</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img src="{{ asset('img/f1.png') }}" alt="alternative" height="50"></a>
+        <a class="navbar-brand logo-image" href="index.html"><img src="{{ asset('img/logo.png') }}" alt="alternative" ></a>
         
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,12 +65,8 @@
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#header">Inicio <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#services">productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#pricing">Paquetes</a>
-                </li>
+                
+                
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#request">Registro</a>
                 </li>
@@ -110,7 +106,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="text-container">
-                            <h1><span class="turquoise">La mejores Herramientas</span> en un solo lugar</h1>
+                            <h1><span class="red">La mejores Herramientas</span> en un solo lugar</h1>
                             <p class="p-large">Encontra todo para la remodelacion de tu hogare     <a class="btn-solid-lg page-scroll" href="#services">Conocer más </a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
@@ -184,39 +180,38 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>productos de crecimiento empresarial</h2>
-                    <p class="p-heading p-large">Brindamos productos a pequeñas y medianas empresas, con productos de crecimiento de alta calidad que se presentan a continuación.</p>
-                </div> <!-- end of col -->
+                    <h2>Los mejores Productos</h2>
+                     </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12">
 
                     <!-- Card -->
                     <div class="card">
-                        <img class="card-image" src="{{ asset('images/services-icon-1.svg') }}" alt="alternative">
+                        <img class="card-image" src="{{ asset('img/e1.jpg') }}" alt="alternative">
                         <div class="card-body">
-                            <h4 class="card-title">Análisis de mercado</h4>
-                            <p>Nuestro equipo de vendedores entusiastas analizará y evaluará cómo su empresa se compara con los competidores más cercanos.</p>
+                            <h4 class="card-title">Refacciones y accesorios</h4>
+                            <p>Contamos con un extenso surtido de refacciones y accesorios para complementar y alargar la vida útil de los productos.</p>
                         </div>
                     </div>
                     <!-- end of card -->
 
                     <!-- Card -->
                     <div class="card">
-                        <img class="card-image" src="{{ asset('images/services-icon-2.svg') }}" alt="alternative">
+                        <img class="card-image" src="{{ asset('img/e2.jpg') }}" alt="alternative">
                         <div class="card-body">
-                            <h4 class="card-title">Escaneo de oportunidades</h4>
-                            <p>Una vez que se complete el proceso de análisis de mercado, nuestro personal buscará oportunidades que estén a su alcance.</p>
+                            <h4 class="card-title">Centros de servicio</h4>
+                            <p>Ponemos a tu disposición nuestros Centros de Servicio Autorizado Truper, en México y Latinoamérica, donde repararemos tus herramientas eléctricas y a gasolina.</p>
                         </div>
                     </div>
                     <!-- end of card -->
 
                     <!-- Card -->
                     <div class="card">
-                        <img class="card-image" src="{{ asset('images/services-icon-3.svg') }}" alt="alternative">
+                        <img class="card-image" src="{{ asset('img/e3.jpg') }}" alt="alternative">
                         <div class="card-body">
-                            <h4 class="card-title">Plande Acción</h4>
-                            <p>Con toda la información en su lugar, se le presentará un plan de acción que su empresa debe seguir.</p>
+                            <h4 class="card-title">Manuales e instructivos</h4>
+                            <p>Conoce cómo empezar a utilizar tus herramientas eléctricas, neumáticas, a gasolina, gatos hidráulicos, polipastos y más.</p>
                         </div>
                     </div>
                     <!-- end of card -->
@@ -234,14 +229,14 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-container">
-                        <h2>Diseñamos y Planificamos las mejores estrategias de negocios</h2>
-                        <p>Utilice nuestro personal y nuestra experiencia para diseñar y planificar su estrategia de crecimiento empresarial. El equipo de Grow está ansioso por aconsejarle sobre las mejores oportunidades que debe considerar</p>
-                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">LIGHTBOX</a>
+                        <h2>Visión</h2>
+                        <p>Mantenernos como el proveedor más importante y relevante del mercado ferretero en México y América Latina, asegurando la estabilidad de la empresa en el largo plazo a través de un crecimiento y rentabilidad congruentes con el entorno, promoviendo así, el desarrollo de nuestros colaboradores y de México.</p>
+                        
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
                     <div class="image-container">
-                        <img class="img-fluid" src="{{ asset('images/details-1-office-worker.svg') }}" alt="alternative">
+                        <img class="img-fluid" src="{{ asset('img/f2.jpg') }}" width="600" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -256,27 +251,19 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="image-container">
-                        <img class="img-fluid" src="{{ asset('images/details-2-office-team-work.svg') }}" alt="alternative">
+                        <img class="img-fluid" src="{{ asset('img/f4.jpg') }}" width="600" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
                     <div class="text-container">
-                        <h2>Search For Optimization Wherever Is Possible</h2>
+                        <h2>Misión</h2>
                         <ul class="list-unstyled li-space-lg">
-                            <li class="media">
-                                <i class="fas fa-check"></i>
-                                <div class="media-body">Basically we'll teach you step by step what you need to do</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-check"></i>
-                                <div class="media-body">In order to develop your company and reach new heights</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-check"></i>
-                                <div class="media-body">Everyone will be pleased from stakeholders to employees</div>
-                            </li>
+                        <p>Mantenernos como el proveedor más importante y relevante del mercado ferretero en México y América Latina, asegurando la estabilidad de la empresa en el largo plazo a través de un crecimiento y rentabilidad congruentes con el entorno, promoviendo así, el desarrollo de nuestros colaboradores y de México.</p>
+                        
+                            
+                           
                         </ul>
-                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-2">LIGHTBOX</a>
+                      
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -284,96 +271,6 @@
     </div> <!-- end of basic-2 -->
     <!-- end of details 2 -->
 
-    <!-- Details Lightboxes -->
-    <!-- Details Lightbox 1 -->
-	<div id="details-lightbox-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="container">
-            <div class="row">
-                <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-                <div class="col-lg-8">
-                    <div class="image-container">
-                        <img class="img-fluid" src="{{ asset('images/details-lightbox-1.svg') }}" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <h3>Design And Plan</h3>
-                    <hr>
-                    <h5>Core feature</h5>
-                    <p>The emailing module basically will speed up your email marketing operations while offering more subscriber control.</p>
-                    <p>Do you need to build lists for your email campaigns? It just got easier with Grow.</p>
-                    <ul class="list-unstyled li-space-lg">
-                        <li class="media">
-                            <i class="fas fa-check"></i><div class="media-body">List building framework</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-check"></i><div class="media-body">Easy database browsing</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-check"></i><div class="media-body">User administration</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-check"></i><div class="media-body">Automate user signup</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-check"></i><div class="media-body">Quick formatting tools</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-check"></i><div class="media-body">Fast email checking</div>
-                        </li>
-                    </ul>
-                    <a class="btn-solid-reg mfp-close page-scroll" href="#request">REQUEST</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">BACK</a>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of details lightbox 1 -->
-
-    <!-- Details Lightbox 2 -->
-	<div id="details-lightbox-2" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="container">
-            <div class="row">
-                <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-                <div class="col-lg-8">
-                    <div class="image-container">
-                        <img class="img-fluid" src="{{ asset('images/details-lightbox-2.svg') }}" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <h3>Search To Optimize</h3>
-                    <hr>
-                    <h5>Core feature</h5>
-                    <p>The emailing module basically will speed up your email marketing operations while offering more subscriber control.</p>
-                    <p>Do you need to build lists for your email campaigns? It just got easier with Grow.</p>
-                    <ul class="list-unstyled li-space-lg">
-                        <li class="media">
-                            <i class="fas fa-check"></i><div class="media-body">List building framework</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-check"></i><div class="media-body">Easy database browsing</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-check"></i><div class="media-body">User administration</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-check"></i><div class="media-body">Automate user signup</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-check"></i><div class="media-body">Quick formatting tools</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-check"></i><div class="media-body">Fast email checking</div>
-                        </li>
-                    </ul>
-                    <a class="btn-solid-reg mfp-close page-scroll" href="#request">REQUEST</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">BACK</a>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of details lightbox 2 -->
-    <!-- end of details lightboxes -->
-
-
-   
 
     <!-- Request -->
     <div id="request" class="form-1">
@@ -382,24 +279,21 @@
                 <div class="col-lg-6">
                     <div class="text-container">
                         <h2>Aqui puedes registrarte </h2>
-                        <p>Grow is one of the easiest and feature packed marketing automation apps in the market. Discover what it can do for your business organization right away.</p>
+                        
                         <ul class="list-unstyled li-space-lg">
                             <li class="media">
                                 <i class="fas fa-check"></i>
-                                <div class="media-body"><strong class="blue">Automate your marketing</strong> activities and get results today</div>
+                                <div class="media-body"><strong class="blue">Visualizacion de productos</strong> </div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-check"></i>
-                                <div class="media-body"><strong class="blue">Interact with all your</strong> targeted customers at a personal level</div>
+                                <div class="media-body"><strong class="blue">Compra segura</strong> </div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-check"></i>
-                                <div class="media-body"><strong class="blue">Convince them to buy</strong> your company's awesome products</div>
+                                <div class="media-body"><strong class="blue">Reportes de compras</strong></div>
                             </li>
-                            <li class="media">
-                                <i class="fas fa-check"></i>
-                                <div class="media-body"><strong class="blue">Save precious time</strong> and invest it where you need it the most</div>
-                            </li>
+                         
                         </ul>
                         <form action="{{ route('registrar') }}" method="post">
                             @csrf
@@ -476,152 +370,28 @@
     <!-- end of request -->
 
 
-    <!-- Video -->
-    <div class="basic-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Check Out The Video</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                    <!-- Video Preview -->
-                    <div class="image-container">
-                        <div class="video-wrapper">
-                            <a class="popup-youtube" href="https://www.youtube.com/watch?v=fLCjQJCekTs" data-effect="fadeIn">
-                                <img class="ñ-fluid" src="{{ asset('images/video-frame.svg') }}" alt="alternative">
-                                <span class="video-play-button">
-                                    <span></span>
-                                </span>
-                            </a>
-                        </div> <!-- end of video-wrapper -->
-                    </div> <!-- end of image-container -->
-                    <!-- end of video preview -->
-
-                    <p>This video will show you a case study for one of our <strong>Major Customers</strong> and will help you understand why your startup needs Grow in this highly competitive market</p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-3 -->
-    <!-- end of video -->
-
-
-    <!-- Testimonials -->
-    <div class="slider-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="image-container">
-                        <img class="img-fluid" src="{{ asset('images/testimonials-2-men-talking.svg') }}" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    <h2>Testimonials</h2>
-
-                    <!-- Card Slider -->
-                    <div class="slider-container">
-                        <div class="swiper-container card-slider">
-                            <div class="swiper-wrapper">
-                                
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="{{ asset('images/testimonial-1.svg') }}" alt="alternative">
-                                        <div class="card-body">
-                                            <p class="testimonial-text">I just finished my trial period and was so amazed with the support and results that I purchased Grow right away at the special price.</p>
-                                            <p class="testimonial-author">Jude Thorn - Designer</p>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="{{ asset('images/testimonial-2.svg') }}" alt="alternative">
-                                        <div class="card-body">
-                                            <p class="testimonial-text">Grow has always helped or startup to position itself in the highly competitive market of mobile applications. You will not regret using it!</p>
-                                            <p class="testimonial-author">Marsha Singer - Developer</p>
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="{{ asset('images/testimonial-3.svg') }}" alt="alternative">
-                                        <div class="card-body">
-                                            <p class="testimonial-text">Love their services and was so amazed with the support and results that I purchased Grow for two years in a row. They are awesome.</p>
-                                            <p class="testimonial-author">Roy Smith - Marketer</p>
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-                               
-                            </div> <!-- end of swiper-wrapper -->
-        
-                            <!-- Add Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <!-- end of add arrows -->
-        
-                        </div> <!-- end of swiper-container -->
-                    </div> <!-- end of slider-container -->
-                    <!-- end of card slider -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of slider-2 -->
-    <!-- end of testimonials -->
-
 
     <!-- About -->
     <div id="about" class="basic-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>About The Team</h2>
-                    <p class="p-heading p-large">Meat our team of specialized marketers and business developers which will help you research new products and launch them in new emerging markets</p>
+                    <h2>Acerca del equipo</h2>
+                    <p class="p-heading p-large">Un trabajo Terminado en una semana para el ING.René.</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12">
                     
-                    <!-- Team Member -->
-                    <div class="team-member">
-                        <div class="image-wrapper">
-                            <img class="img-fluid" src="{{ asset('images/team-member-1.svg') }}" alt="alternative">
-                        </div> <!-- end of image-wrapper -->
-                        <p class="p-large"><strong>Lacy Whitelong</strong></p>
-                        <p class="job-title">Business Developer</p>
-                        <span class="social-icons">
-                            <span class="fa-stack">
-                                <a href="#your-link">
-                                    <i class="fas fa-circle fa-stack-2x facebook"></i>
-                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack">
-                                <a href="#your-link">
-                                    <i class="fas fa-circle fa-stack-2x twitter"></i>
-                                    <i class="fab fa-twitter fa-stack-1x"></i>
-                                </a>
-                            </span>
-                        </span> <!-- end of social-icons -->
-                    </div> <!-- end of team-member -->
-                    <!-- end of team member -->
+                   
 
                     <!-- Team Member -->
                     <div class="team-member">
                         <div class="image-wrapper">
                             <img class="img-fluid" src="{{ asset('images/team-member-2.svg') }}" alt="alternative">
                         </div> <!-- end of image wrapper -->
-                        <p class="p-large"><strong>Chris Brown</strong></p>
-                        <p class="job-title">Online Marketer</p>
+                        <p class="p-large"><strong>Rudy Samuel Rios Hernandez</strong></p>
+                        <p class="job-title">Desarrollador Web</p>
                         <span class="social-icons">
                             <span class="fa-stack">
                                 <a href="#your-link">
@@ -631,7 +401,7 @@
                             </span>
                             <span class="fa-stack">
                                 <a href="#your-link">
-                                    <i class="fas fa-circle fa-stack-2x twitter"></i>
+                                    <i class="fas fa-circle fa-stack-2x instagram"></i>
                                     <i class="fab fa-twitter fa-stack-1x"></i>
                                 </a>
                             </span>
@@ -639,53 +409,9 @@
                     </div> <!-- end of team-member -->
                     <!-- end of team member -->
 
-                    <!-- Team Member -->
-                    <div class="team-member">
-                        <div class="image-wrapper">
-                            <img class="img-fluid" src="{{ asset('images/team-member-3.svg') }}" alt="alternative">
-                        </div> <!-- end of image wrapper -->
-                        <p class="p-large"><strong>Sheila Zimerman</strong></p>
-                        <p class="job-title">Software Engineer</p>
-                        <span class="social-icons">
-                            <span class="fa-stack">
-                                <a href="#your-link">
-                                    <i class="fas fa-circle fa-stack-2x facebook"></i>
-                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack">
-                                <a href="#your-link">
-                                    <i class="fas fa-circle fa-stack-2x twitter"></i>
-                                    <i class="fab fa-twitter fa-stack-1x"></i>
-                                </a>
-                            </span>
-                        </span> <!-- end of social-icons -->
-                    </div> <!-- end of team-member -->
-                    <!-- end of team member -->
+                   
 
-                    <!-- Team Member -->
-                    <div class="team-member">
-                        <div class="image-wrapper">
-                            <img class="img-fluid" src="{{ asset('images/team-member-4.svg') }}" alt="alternative">
-                        </div> <!-- end of image wrapper -->
-                        <p class="p-large"><strong>Mary Villalonga</strong></p>
-                        <p class="job-title">Product Manager</p>
-                        <span class="social-icons">
-                            <span class="fa-stack">
-                                <a href="#your-link">
-                                    <i class="fas fa-circle fa-stack-2x facebook"></i>
-                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack">
-                                <a href="#your-link">
-                                    <i class="fas fa-circle fa-stack-2x twitter"></i>
-                                    <i class="fab fa-twitter fa-stack-1x"></i>
-                                </a>
-                            </span>
-                        </span> <!-- end of social-icons -->
-                    </div> <!-- end of team-member -->
-                    <!-- end of team member -->
+                    
 
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -700,12 +426,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2>Contact Information</h2>
-                    <ul class="list-unstyled li-space-lg">
-                        <li class="address">Don't hesitate to give us a call or send us a contact form message</li>
-                        <li><i class="fas fa-map-marker-alt"></i>22 Innovative Area, San Francisco, CA 94043, US</li>
-                        <li><i class="fas fa-phone"></i><a class="turquoise" href="tel:003024630820">+81 720 2212</a></li>
-                        <li><i class="fas fa-envelope"></i><a class="turquoise" href="mailto:office@Grow.com">office@Grow.com</a></li>
-                    </ul>
+                    
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
@@ -719,7 +440,7 @@
                     <form id="contactForm" data-toggle="validator" data-focus="false">
                         <div class="form-group">
                             <input type="text" class="form-control-input" id="cname" required>
-                            <label class="label-control" for="cname">Name</label>
+                            <label class="label-control" for="cname">Nombre</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
@@ -729,15 +450,12 @@
                         </div>
                         <div class="form-group">
                             <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                            <label class="label-control" for="cmessage">Your message</label>
+                            <label class="label-control" for="cmessage">Mensaje</label>
                             <div class="help-block with-errors"></div>
                         </div>
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I have read and agree with Grow's stated <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a> 
-                            <div class="help-block with-errors"></div>
-                        </div>
+                       
                         <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
+                            <button type="submit" class="form-control-submit-button">Enviar mensaje</button>
                         </div>
                         <div class="form-message">
                             <div id="cmsgSubmit" class="h3 text-center hidden"></div>
@@ -750,72 +468,6 @@
         </div> <!-- end of container -->
     </div> <!-- end of form-2 -->
     <!-- end of contact -->
-
-
-    <!-- Footer -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="footer-col">
-                        <h4>About Grow</h4>
-                        <p>We're passionate about offering some of the best business growth services for startups</p>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="col-md-4">
-                    <div class="footer-col middle">
-                        <h4>Important Links</h4>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Our business partners <a class="turquoise" href="#your-link">startupguide.com</a></div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Read our <a class="turquoise" href="terms-conditions.html">Terms & Conditions</a>, <a class="turquoise" href="privacy-policy.html">Privacy Policy</a></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="col-md-4">
-                    <div class="footer-col last">
-                        <h4>Social Media</h4>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-google-plus-g fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-instagram fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                            </a>
-                        </span>
-                    </div> 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of footer -->  
-    <!-- end of footer -->
 
 
     <!-- Copyright -->

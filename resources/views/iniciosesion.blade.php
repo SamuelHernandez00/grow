@@ -38,7 +38,7 @@
 	<link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 	
 	<!-- Favicon  -->
-    <link rel="icon" href="{{ asset('images/favicon.png') }}">
+    <link rel="icon" href="{{ asset('img/logo.png') }}">
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -61,7 +61,7 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Evolo</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img src="{{ asset('images/logo.svg') }}" alt="alternative"></a>
+        <a class="navbar-brand logo-image" href="index.html"><img src="{{ asset('img/logo.png') }}" alt="alternative"></a>
         
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -158,7 +158,7 @@
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
                         <div class="image-container">
-                            <img class="img-fluid" src="{{ asset('images/header-teamwork.svg') }}" alt="alternative">
+                            <img class="img-fluid" src="{{ asset('img/f4.jpg') }}" width="500" alt="alternative">
                         </div> <!-- end of image-container -->
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
