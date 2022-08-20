@@ -29,7 +29,7 @@
 	<link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 	
 	<!-- Favicon  -->
-    <link rel="icon" href="{{ asset('images/favicon.png') }}">
+    <link rel="icon" href="{{ asset('img/f1.png') }}">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
@@ -51,7 +51,7 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Grow</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img src="{{ asset('images/logo.svg') }}" alt="alternative"></a>
+        <a class="navbar-brand logo-image" href="index.html"><img src="{{ asset('img/f1.png') }}" alt="alternative" height="50"></a>
         
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -110,14 +110,13 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="text-container">
-                            <h1><span class="turquoise">Actualice su Negocio</span> entre al mundo digital</h1>
-                            <p class="p-large">Grow es un Servicio que te ofrece diversos productos para tu negocios, desde manejo de publicidad en redes sociales, hasta creacion de contenido y paginas web</p>
-                            <a class="btn-solid-lg page-scroll" href="#services">Conocer más </a>
+                            <h1><span class="turquoise">La mejores Herramientas</span> en un solo lugar</h1>
+                            <p class="p-large">Encontra todo para la remodelacion de tu hogare     <a class="btn-solid-lg page-scroll" href="#services">Conocer más </a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
                         <div class="image-container">
-                            <img class="img-fluid" src="{{ asset('images/header-teamwork.svg') }}" alt="alternative">
+                            <img class="img-fluid" src="{{ asset('img/f3.jpg') }}" alt="alternative">
                         </div> <!-- end of image-container -->
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
@@ -132,7 +131,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h5>Algunos de Nuestros Clientes</h5>
+                    <h5>Algunos de Nuestras Marcas Disponibles</h5>
                     
                     <!-- Image Slider -->
                     <div class="slider-container">
@@ -140,32 +139,32 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="image-container">
-                                        <img class="img-responsive" src="{{ asset('images/customer-logo-1.png') }}" alt="alternative">
+                                        <img class="img-responsive" src="{{ asset('img/m1.png') }}" width="100" alt="alternative">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="image-container">
-                                        <img class="img-responsive" src="{{ asset('images/customer-logo-2.png') }}" alt="alternative">
+                                        <img class="img-responsive" src="{{ asset('img/m2.jpg') }}"  width="100" alt="alternative">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="image-container">
-                                        <img class="img-responsive" src="{{ asset('images/customer-logo-3.png') }}" alt="alternative">
+                                        <img class="img-responsive" src="{{ asset('img/m3.jpg') }}" width="100" alt="alternative">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="image-container">
-                                        <img class="img-responsive" src="{{ asset('images/customer-logo-4.png') }}" alt="alternative">
+                                        <img class="img-responsive" src="{{ asset('img/m4.png') }}" width="100" alt="alternative">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="image-container">
-                                        <img class="img-responsive" src="{{ asset('images/customer-logo-5.png') }}" alt="alternative">
+                                        <img class="img-responsive" src="{{ asset('img/m5.png') }}" width="100" alt="alternative">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="image-container">
-                                        <img class="img-responsive" src="{{ asset('images/customer-logo-6.png') }}" alt="alternative">
+                                        <img class="img-responsive" src="{{ asset('img/m6.png') }}" width="100" alt="alternative">
                                     </div>
                                 </div>
                             </div> <!-- end of swiper-wrapper -->
