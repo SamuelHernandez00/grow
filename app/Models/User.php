@@ -20,6 +20,7 @@ class User extends Model
         'password',
         'fn',
         'foto',
+        'tipo',
         'terminos'
     ];
 

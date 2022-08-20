@@ -1,28 +1,38 @@
-<select name="id_organizacion" id="id_empleado">
-    <option value="0">-- Selecciona una Organizacion</option>
-    @foreach( $organizaciones as $orga)
-      <option value="{{$orga->id}}">{{$orga->nombre}}</option>
-    @endforeach
-</select>
 
 
+<hr>
+
+<h2>Formulario de Ventas del Producto  / {{ $producto->nombre }}  </h2>
+<img src="{{ asset('img/'.$producto->img) }}" alt="" width="100"><br>
+Costo (C/U): <input type="text" id="precio" value=" {{ $producto->precio }} " ><br>
 
 
-<script type="text/javascript">
+Cantidad:
+<input type="text" name="cantidad" id="cantidad" >
+<br>
+
+Total:
+<input type="text" name="total" id="total">
+<br><br>
+<input type="submit" value="Venta">
+
+    <script type="text/javascript">
     $(document).ready(function(){
+        $('#cantidad').keyup(function(){
+            $(this).val();
 
-        $("#id_empleado").change(function(){
-            var empleado = $("#id_empleado").val();
-              
-              if(empleado == 0){
-                  $("#info01").empty();
-                  $("#info02").empty();
-                  $("#info02").html('<img src="{{ asset("img/usuario.jpg") }}" alt="" width="50"  >');
-              }
-            else{
-                
-            }
+           
+
+           var cantidad = $('#cantidad').val();
+            var costo = $('#precio').val();
+
+            var total = cantidad * costo ;
+       
+            $('#total').val(total);
+           
         });
+        
 
     });
-</script>
+
+    </script>

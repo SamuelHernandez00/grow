@@ -397,6 +397,7 @@
     <label >Foto</label>
     <input type="file"  name="foto" required>
      </div>
+    
    
   <div class="mb-3 form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1" name="terminos" required>
@@ -405,6 +406,10 @@
   <button type="submit" class="btn btn-primary">Enviar</button>
 
                         </form>
+                        <br>
+                        <a href="{{ route('imprimir') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                            <i class="fas fa-print fa-sm text-white-50"></i>Imprimir PDF
+                        </a>
                         <br>
                         Busqueda de usuarios
 

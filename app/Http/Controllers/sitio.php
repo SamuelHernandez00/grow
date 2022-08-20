@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\productos;
 use App\Models\ventas;
+use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\organizaciones;
+
 
 class sitio extends Controller
 {
@@ -38,7 +40,7 @@ class sitio extends Controller
             'password' => bcrypt($request->input('password')),
             'fn' => $request->input('fn'),
             'foto' => $request->input('foto'),
-           
+            'tipo' => $request->input('tipo'),
             'terminos' => $request->input('terminos'),
 
         ));
@@ -142,9 +144,11 @@ class sitio extends Controller
     public function lista_ventas(){
 
         $ventas = ventas::all();
-        $usuarios = User::all();    
+        $usuarios = User::all(); 
+        $productos = productos::all();    
         return view('ventas')
         ->with(['usuarios' => $usuarios])
+        ->with(['productos' => $productos])
         ->with(['ventas'=>$ventas]);
     }
 
@@ -155,21 +159,21 @@ class sitio extends Controller
         $venta = ventas::all();
         $ventas = ventas::create(array(
             'id_user' => $request->input('id_user'),
-            'id_organizacion' => $request->input('id_organizacion'),
-            'nombre' => $request->input('nombre'),
-            'duracion' => $request->input('duracion'),
+            'id_producto' => $request->input('id_producto'),
+            'cantidad' => $request->input('cantidad'),
             'descripcion' => $request->input('descripcion'),
-            'estado' => $request->input('estado'),
-            'supervision' => $request->input('supervision'),
-            'Fecha_inicio' => $request->input('fecha_inicio'),
-            'Fecha_culminacion' => $request->input('fecha_culminacion'),
-            'Costo_Final' => $request->input('costo_final'),
+            'total' => $request->input('total'),
         ));
 
         return redirect()->route('ventas')
          ->with(['usuarios' => $usuarios])
          ->with(['venta' => $venta]);
         
+    }
+
+    public function borrar_venta(ventas $id){
+        $id->delete();
+        return redirect()->to('dash_ventas');
     }
 
     public function ventas2a(Request $request){
@@ -179,5 +183,29 @@ class sitio extends Controller
         
         return view("ventas2a")
         ->with(['organizaciones' => $organizaciones]);
+    }
+
+    public function imprimir(){
+        $usuarios = \DB::table('users')
+        ->select('users.*')
+        ->orderBy('id','ASC')
+        ->get();
+        
+        $data = compact('usuarios');
+    $pdf = Pdf::loadView('pdf.reporteusuarios', $data);
+
+    return $pdf->stream();
+
+       
+    }
+
+    public function datos2a(Request $request){
+        $id = $request->get('id_producto');
+        $producto = productos::find($id);
+
+        return view("ventas2a")
+        ->with(['producto' => $producto]);
+        
+        
     }
 }

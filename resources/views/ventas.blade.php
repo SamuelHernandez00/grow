@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+    <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
 </head>
 
 <body id="page-top">
@@ -373,94 +373,77 @@
                 <tr>
                     <td>Usuario:</td>
                     <td>
-                        <select name="id_user" id="tiendas">
+                        <select name="id_user" id="usuario">
                             <option value="0">-- Seleccione un Usuario --</option>
                             @foreach($usuarios as $usu)
-                               <option value="{{$usu->id}}">{{$usu->nombre}}</option>
+                               <option value="{{$usu->id}}">{{$usu->nombre}} </option>
                                @endforeach
                         </select>
                     </td>
-                    <td id="info01" style="text-align: justify"></td> 
+                     
                 </tr>
                 <tr>
-                   
-                    </td> 
+               <td>Proctos</td>
+               <td>
+                        <select name="id_producto" id="productos">
+                            <option value="0">-- Seleccione un Producto --</option>
+                            @foreach($productos as $pro)
+                                
+                               <option value="{{$pro->id}}">{{$pro->nombre}}</option>
+                               
+                             
+                              
+                               @endforeach
+                        </select>
+
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td></td>
+                <td id="infoproducto"></td>
                 </tr>
             </table>
 
             <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Nombre del Proyecto</label>
-    <input type="text" class="form-control" id="" aria-describedby="emailHelp" name="nombre" required>
-    </div>
-    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Durecion</label>
-    <input type="text" class="form-control" id="" aria-describedby="emailHelp" name="duracion" required>
-    </div>
-    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Descripcion</label>
-    <input type="text" class="form-control" id="" aria-describedby="emailHelp" name="descripcion" required>
-    </div>
-    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Estado</label>
-    <input type="radio" name="estado" id="">Activo
-    <input type="radio" name="estado" id="">Inactivo
-    </div>
-    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Supervision</label>
-    <input type="text" class="form-control" id="" aria-describedby="emailHelp" name="supervision" required>
-    </div>
-    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Fecha Inicio</label>
-    <input type="date" class="form-control" id="" aria-describedby="emailHelp" name="fecha_inicio" required>
-    </div>
-    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Fecha Culminacion</label>
-    <input type="date" class="form-control" id="" aria-describedby="emailHelp" name="fecha_culminacion" required>
-    </div>
-    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Costo Final</label>
-    <input type="text" class="form-control" id="" aria-describedby="emailHelp" name="costo_final" required>
-    </div>
+    
+    <br>
 
   
     <button type="submit" class="btn btn-primary">Realizar venta</button>
 </form>
-<br><br>
-                       
+
+<br>
 <table lenght="30" border>
                             <tr>
-                                <th>Id_Proyecto</th>
-                                <th>Cliente</th>
-                                <th>Organizacion</th>
+                                <th>Id_venta</th>
+                                <th>Usuario</th>
+                                <th>Id_Producto</th>
+                                <th>Foto producto</th>
                                 <th>Nombre</th>
-                                <th>Duracion</th>
                                 <th>Descripcion</th>
-                                <th>Estado</th>
-                                <th>Supervision</th>
-                                <th>Fecha Inicio</th>
-                                <th>Fecha Culminacion</th>
-                                <th>Costo Final</th>
+                                <th>Cantidad</th>
+                                <th>Total</th>
+                               
                             </tr>
                             @foreach($ventas as $venta)
                             <tr>
                                 <td>{{ $venta->id }}</td>
                                 <td>{{$venta->User->nombre}}</td>
-                                <td>{{$venta->id_organizacion}}</td>
-                                <td>{{$venta->nombre}}</td>
-                                <td>{{$venta->duracion}}</td>
-                                <td>{{$venta->descripcion}}</td>
-                                <td>{{$venta->estado}}</td>
-                                <td>{{$venta->supervision}}</td>
-                                <td>{{$venta->Fecha_inicio}}</td>
-                                <td>{{$venta->Fecha_culminacion}}</td>
-                                <td>{{$venta->Costo_Final}}</td>
-                                <td>
-
-			                      {{ csrf_field() }}
+                                <td>{{$venta->productos->nombre}}</td>
+                                <td><img src=" {{ asset('img/'.$venta->productos->img)}}" width="40"></td>
+                                <td>{{$venta->productos->descripcion}}</td>
+                                <td>{{$venta->cantidad}}</td>
+                                <td>{{$venta->total}}</td>a
+                               <td>
+        	                    <form action="{{ route('borrar_venta',['id' => $venta->id]) }}" method="POST" >
+				                {{ csrf_field() }}
 				                {{ method_field('DELETE') }}
-				                <input type="submit" value="Borrar 1"  class="btn btn-warning" style="color:black;">
+				                <input type="submit" value="Borrar "  class="btn btn-warning" style="color:black;">
 			                    </form>
-			                      </td>
+			                     </td>
+                                    </form>
+			                      
                             </tr>
                             @endforeach  
                         </table>
@@ -468,33 +451,39 @@
 
                     <div class="row">
 
+               
                     <script type="text/javascript" >
             $(document).ready(function(){
 
                 
                
-                $("#tiendas").change(function(){
-                    var valtienda = $("#tiendas").val();
-                    if(valtienda == 0){
-                
-                        $("#empleado").empty();
-                   
-                        $("#empleado").html('<select name="id_organizacion" id="id_empleado"><option value="0">--- Seleccione una Tienda Antes ---</option></select>');
-                    }
+                $("#productos").change(function(){
+                    var valproducto = $("#productos").val();
+                    if(valproducto == 0){
+                       
+                        $('#infoproducto').empty();
+                      
+                         }
                     else{
-                        $('#empleado').empty();
-            
-                        $("#empleado").load("{{ route('ventas2a') }}?id_user=" + valtienda).serialize();
+                    
+                     
+                        $("#infoproducto").load("{{ route('ventas2a') }}?id_producto=" + valproducto);
+                       
                        
                       
                        
                     }
 
-                  
+                    
 
-                });                
+                });
 
-    <!-- Bootstrap core JavaScript-->
+            
+
+            });
+        </script>
+    
+   
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

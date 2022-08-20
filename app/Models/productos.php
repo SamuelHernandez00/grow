@@ -20,4 +20,10 @@ class productos extends Model
         'img',
         'precio',
     ];
+
+   
+
+    public function ventas(){
+        return $this->hasMany(ventas::class,'id');
+    }
 }

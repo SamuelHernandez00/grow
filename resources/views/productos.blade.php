@@ -408,7 +408,7 @@
                                 <td>{{ $servicio->id }}</td>
                                 <td>{{ $servicio->nombre }}</td>
                                 <td>{{ $servicio->descripcion }}</td> 
-                                <td>{{ $servicio->img }}</td>
+                                <td><img src=" {{ asset('img/'.$servicio->img)}}" width="40"></td>
                                 <td>{{ $servicio->precio }}</td>
                                 <td>
 			                   <a href="{{ route('editar_producto',['id' => $servicio->id]) }}"><button class="btn btn-warning"><b style="color:white;">Editar</b></button></a>

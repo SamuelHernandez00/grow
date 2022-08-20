@@ -75,12 +75,16 @@ Route::name('ventas')
     ->get('dash_ventas/',
     [sitio::class, 'lista_ventas'
 ]);
+Route::name('borrar_venta')->delete('/borrar_venta/{id}',[sitio::class, 'borrar_venta']);
 
 Route::name('borrar1')->delete('/borrar/{id}',[sitio::class, 'borrar']);
 Route::name('editar')->get('usuario_editar/{id}',[sitio::class, 'editar']);
 Route::name('salvar')->put('usuario_salvar/{id}',[sitio::class, 'salvar']);
+//Reporte
+Route::name('imprimir')->get('/imprimir',[sitio::class, 'imprimir']);
 
 Route::name('borrar_producto')->delete('/borrar_producto/{id}',[sitio::class, 'borrar_producto']);
 Route::name('editar_producto')->get('producto_editar/{id}',[sitio::class, 'editar_producto']);
 Route::name('salvar_producto')->put('producto_editar/{id}',[sitio::class, 'salvar_producto']);
 
+Route::name('ventas2a')->get('/ventas2a',[sitio::class, 'datos2a']);

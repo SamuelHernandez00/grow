@@ -15,21 +15,15 @@ class ventas extends Model
 
     protected $fillable = [
     'id_user',
-    'id_organizacion',
-    'nombre',
-    'duracion',
-    'descripcion',
-    'estado',
-    'supervision',
-    'Fecha_inicio',
-    'Fecha_culminacion',
-    'Costo_Final',
+    'id_producto',
+    'cantidad',
+    'total',
     ];
 
     public function User(){
         return $this->belongsTo(User::class,'id_user');
     }
-    public function organizaciones(){
-        return $this->belongsTo(organizaciones::class,'id_organizaciones');
+    public function productos(){
+        return $this->belongsTo(productos::class,'id_producto');
     }
 }
