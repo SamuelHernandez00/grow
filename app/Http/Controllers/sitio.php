@@ -153,13 +153,13 @@ class sitio extends Controller
     }
 
     public function dash(){
-          $ventas = ventas::all();
+        $ventas = ventas::all();
         $usuarios = User::all(); 
         $productos = productos::all();    
         return view('dash')
         ->with(['usuarios' => $usuarios])
         ->with(['productos' => $productos])
-        ->with(['ventas'=>$ventas]);
+        ->with(['ventas'  =>  $ventas]);
     }
 
     public function registrar_venta(Request $request){

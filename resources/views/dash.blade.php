@@ -121,18 +121,6 @@
                     <!-- Content Row -->
                     <div class="row">
 
-                    @php
-                              $suma=0;
-                             @endphp
-                             @foreach($ventas as $venta)
-                            @php
-                $suma+=$venta->total;//sumanos los valores, ahora solo fata mostrar dicho valor
-                 @endphp
-                            @endforeach  
-                       
-                    Total de ventas realizadas: <label id="sumatotal" >  $ {{ $suma }}</label>
-        
-
 
     <!-- Bootstrap core JavaScript-->
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
